@@ -4,9 +4,9 @@ The code under review can be found in [2023-12-Voting-Booth](https://github.com/
 ## Findings Summary
 | ID | Description | Severity |
 | :-: | - | :-: |
-| [H-01] || High |
+| [H-01](#h-1-in-votingbooth_distributerewards-rewardpervoter-is-miscalculated-causing-eth-to-be-stuck-and-voters-to-receive-less-reward-than-expected) | In `VotingBooth::_distributeRewards`, `rewardPerVoter` is miscalculated, causing ETH to be stuck and voters to receive less reward than expected | High |
 
-## [H-1] In `VotingBooth::_distributeRewards`, `rewardPerVoter` calculation wrongly divides the total reward by all voters instead of just `for` voters, causing ETH to be stuck in the contract and, `for` voters receiving less reward than expected.
+## [H-1] In VotingBooth::_distributeRewards, rewardPerVoter is miscalculated, causing ETH to be stuck and voters to receive less reward than expected.
 
 ### Description
 After the quorum has been reached, if the `for` votes are greater than the `against` votes, the ETH reward must be distributed among the `for` voters, but in `VootingBooth::_distributeRewards` the `rewardPerVoter` calculation wrongly divides the total reward by all voters instead of just `for` voters, causing ETH to be stuck in the contract forever.<br>
