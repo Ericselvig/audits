@@ -4,7 +4,7 @@ The code under review can be found in [2023-12-Voting-Booth](https://github.com/
 ## Findings Summary
 | ID | Description | Severity |
 | :-: | - | :-: |
-| [H-01](#h-1-in-votingbooth_distributerewards-rewardpervoter-is-miscalculated-causing-eth-to-be-stuck-and-voters-to-receive-less-reward-than-expected) | In `VotingBooth::_distributeRewards`, `rewardPerVoter` is miscalculated, causing ETH to be stuck and voters to receive less reward than expected | High |
+| [H-01](https://github.com/Ericselvig/audits/blob/98420c370071be98d6718aa714ed74a4ffb177af/codehawks-first-flights/2023-12-Voting-Booth.md?plain=1#L9) | In `VotingBooth::_distributeRewards`, `rewardPerVoter` is miscalculated, causing ETH to be stuck and voters to receive less reward than expected | High |
 
 ## [H-1] In VotingBooth::_distributeRewards, rewardPerVoter is miscalculated, causing ETH to be stuck and voters to receive less reward than expected.
 
